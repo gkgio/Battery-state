@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Реализация разукрашенной фигуры с чёрной обводкой
+     и слегка скругленными краями с фигурой поверх  -->
+
+       <item>
+          <shape>
+              <corners android:radius="@dimen/battery_angle_rounding" />
+
+              <stroke
+                  android:width="@dimen/battery_border_width"
+                  android:color="@color/battery_border" />
+          </shape>
+      </item>
+
+      <item>
+          <clip
+              android:clipOrientation="vertical"
+              android:gravity="bottom">
+              <shape>
+                  <corners android:radius="@dimen/battery_angle_rounding" />
+
+                  <solid android:color="@color/red" />
+
+                  <stroke
+                      android:width="@dimen/battery_border_width"
+                      android:color="@color/battery_border" />
+              </shape>
+          </clip>
+      </item>
+
+    <item android:drawable="@drawable/ic_flash_full" />
+
+ </layer-list>

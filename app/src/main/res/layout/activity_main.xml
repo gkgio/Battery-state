@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.gio.batterystate.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/battery_indicator"
+            android:layout_width="@dimen/battery_indicator_width"
+            android:layout_height="@dimen/battery_indicator_height"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/battery_indicator_margin"
+            android:layout_marginTop="@dimen/battery_indicator_margin"
+            android:contentDescription="@string/accessibility_battery"
+            android:src="@drawable/battery_state_flash" />
+
+        <TextView
+            android:id="@+id/battery_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_indicator"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/PercentTextAppearance"
+            tools:text="42%" />
+
+        <TextView
+            android:id="@+id/battery_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_percentage"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/StatusTextAppearance"
+            tools:text="Discharging" />
+
+        <TextView
+            android:id="@+id/battery_health"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_status"
+            android:layout_marginTop="@dimen/icon_padding"
+            android:drawableLeft="@drawable/ic_health_primary"
+            android:drawablePadding="@dimen/icon_padding"
+            android:drawableStart="@drawable/ic_health_primary"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:padding="@dimen/icon_padding"
+            android:textAppearance="@style/InfoTextAppearance"
+            tools:text="Dead" />
+
+        <LinearLayout
+            android:id="@+id/battery_stats_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_health"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/battery_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_temperature_primary_24dp"
+                android:drawablePadding="@dimen/icon_padding"
+                android:drawableStart="@drawable/ic_temperature_primary_24dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/icon_padding"
+                android:textAppearance="@style/InfoTextAppearance"
+                tools:text="42°" />
+
+            <TextView
+                android:id="@+id/battery_voltage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_voltage_primary_24dp"
+                android:drawablePadding="@dimen/icon_padding"
+                android:drawableStart="@drawable/ic_voltage_primary_24dp"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:padding="@dimen/icon_padding"
+                android:textAppearance="@style/InfoTextAppearance"
+                tools:text="220V" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/battery_technology"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/battery_stats_layout"
+            android:drawableLeft="@drawable/ic_technology_primary_24dp"
+            android:drawablePadding="@dimen/icon_padding"
+            android:drawableStart="@drawable/ic_technology_primary_24dp"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:padding="@dimen/icon_padding"
+            android:textAppearance="@style/InfoTextAppearance"
+            tools:text="Li-Ion" />
+
+    </RelativeLayout>
+
+</ScrollView>
