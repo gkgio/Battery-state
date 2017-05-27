@@ -93,6 +93,10 @@ public class MainActivity extends Activity {
     protected void onStart() {
         super.onStart();
         startListeningForBattery();
+
+        //Start Service
+        Intent intent = new Intent(MainActivity.this, NotifierService.class);
+        startService(intent);
     }
 
     @Override

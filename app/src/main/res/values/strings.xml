@@ -31,4 +31,5 @@
     <string name="battery_technology_unknown">Unknown</string>
 
     <string name="accessibility_battery">Battery indicator</string>
+    <string name="warning_battery_low">Lower level of battery!</string>
 </resources>
